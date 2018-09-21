@@ -36,7 +36,7 @@ RUN sudo apt-get upgrade -y
 RUN echo 'options(download.file.method = "wget")' >> /etc/R/Rprofile.site 
 
 # 1.7 install shiny package
-RUN sudo su - -c "R -e \"install.packages(c('shiny', 'rmarkdown'), repos='https://cran.rstudio.com/')\""
+RUN sudo su - -c "R -e \"install.packages(c('devtools', 'gplots', 'httr', 'igraph', 'knitr', 'methods', 'plyr', 'RColorBrewer', 'rJava', 'rjson', 'R.methodsS3', 'R.oo', 'sqldf', 'stringr', 'testthat', 'XML', 'DT', 'htmlwidgets', 'shiny', 'rmarkdown'), repos='https://cran.rstudio.com/')\""
 
 
 # 2. INSTALL SHINY SERVER PRO

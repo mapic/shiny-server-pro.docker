@@ -1,1 +1,2 @@
-# Docker image for Shiny Server Pro
+# Shiny Server Pro
+
