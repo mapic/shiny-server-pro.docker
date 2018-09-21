@@ -1,2 +1,0 @@
-## Shiny Floating License Server
-

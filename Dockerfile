@@ -36,7 +36,7 @@ RUN sudo apt-get upgrade -y
 RUN echo 'options(download.file.method = "wget")' >> /etc/R/Rprofile.site 
 
 # 1.7 install shiny package
-RUN sudo su - -c "R -e \"install.packages('shiny', repos='https://cran.rstudio.com/')\""
+RUN sudo su - -c "R -e \"install.packages(c('shiny', 'rmarkdown'), repos='https://cran.rstudio.com/')\""
 
 
 # 2. INSTALL SHINY SERVER PRO
@@ -50,6 +50,21 @@ RUN sudo wget https://s3.amazonaws.com/rstudio-shiny-server-pro-build/ubuntu-14.
 # 2.3 intall shiny server pro
 RUN sudo gdebi -n shiny-server-commercial-1.5.9.988-amd64.deb
 
+
+# 3. CONFIGURE
+# -
+# 3.1 add config file
+ADD ./shiny-server.conf /etc/shiny-server/shiny-server.conf
+
+# 3.2 expose ports
+EXPOSE 3838
+
+# 3.3 add entrypoint
+ADD ./docker-entrypoint.sh /home/
+
+WORKDIR /home/
+
+CMD ["bash", "/home/docker-entrypoint.sh"]
 
 
 
