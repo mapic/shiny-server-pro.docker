@@ -1,5 +1,7 @@
 # Shiny Server Pro
 
+This Docker image will install and run Shiny Server Pro. Please see the [RStudio Documentation](http://docs.rstudio.com/shiny-server/) for more information.
+
 ## Install
 
 ```bash
@@ -18,7 +20,7 @@ cd docker.shiny-server-pro
 bash build.sh
 ```
 
-### Start Shiny Server Pro
+## Start Shiny Server Pro
 Start the server by running:
 
 ```bash
