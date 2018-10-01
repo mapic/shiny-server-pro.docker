@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 
 LABEL maintainer="knutole@mapic.io"
 LABEL repository="https://github.com/mapic/docker.shiny-server-pro"
+LABEL version="panda"
 
 
 # 0. INSTALL DEPENDENCIES & UPGRADE
@@ -20,7 +21,6 @@ RUN apt-get upgrade -y
 RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 
 # 1.2 add sources
-# RUN echo "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)/" >> /etc/apt/sources.list
 RUN sudo add-apt-repository 'deb [arch=amd64,i386] https://cran.rstudio.com/bin/linux/ubuntu xenial/'
 
 # 1.3 update sources
