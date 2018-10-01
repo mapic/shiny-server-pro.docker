@@ -35,8 +35,29 @@ RUN sudo apt-get upgrade -y
 # 1.6 configure R
 RUN echo 'options(download.file.method = "wget")' >> /etc/R/Rprofile.site 
 
-# 1.7 install shiny package
-RUN sudo su - -c "R -e \"install.packages(c('devtools', 'gplots', 'httr', 'igraph', 'knitr', 'methods', 'plyr', 'RColorBrewer', 'rJava', 'rjson', 'R.methodsS3', 'R.oo', 'sqldf', 'stringr', 'testthat', 'XML', 'DT', 'htmlwidgets', 'shiny', 'rmarkdown'), repos='https://cran.rstudio.com/')\""
+# 1.7 install shiny packages
+RUN sudo su - -c "R -e \"install.packages(c( \
+  'devtools', \
+  'gplots', \
+  'httr', \
+  'igraph', \
+  'knitr', \
+  'methods', \
+  'plyr', \
+  'RColorBrewer', \
+  'rJava', \
+  'rjson', \
+  'R.methodsS3', \
+  'R.oo', \
+  'sqldf', \
+  'stringr', \
+  'testthat', \
+  'XML', \
+  'DT', \
+  'htmlwidgets', \
+  'shiny', \
+  'rmarkdown' \
+  ), repos='https://cran.rstudio.com/')\""
 
 
 # 2. INSTALL SHINY SERVER PRO
@@ -62,8 +83,10 @@ EXPOSE 3838
 # 3.3 add entrypoint
 ADD ./docker-entrypoint.sh /home/
 
+# 3.4 add workdir
 WORKDIR /home/
 
+# 3.5 add default command
 CMD ["bash", "/home/docker-entrypoint.sh"]
 
 
