@@ -9,7 +9,7 @@ LABEL version="panda"
 # -
 # 0.1 install deps
 RUN apt-get update -y
-RUN apt-get install -y sudo software-properties-common apt-transport-https fish git wget curl htop nano 
+RUN apt-get install -y sudo software-properties-common apt-transport-https fish git wget curl htop nano net-tools iputils-ping
 
 # 0.2 upgrade 
 RUN apt-get upgrade -y
@@ -72,28 +72,18 @@ RUN sudo wget https://s3.amazonaws.com/rstudio-shiny-server-pro-build/ubuntu-14.
 # 2.3 intall shiny server pro
 RUN sudo gdebi -n shiny-server-commercial-1.5.9.988-amd64.deb
 
-# # 3. INSTALL CERTBOT (SSL)
-# # -
-# # 3.1 install certbot
-# RUN sudo add-apt-repository ppa:certbot/certbot
-# RUN sudo apt-get update -y
-# RUN sudo apt-get install -y certbot 
 
-
-# 5. CONFIGURE
+# 3. CONFIGURE
 # -
-# 5.1 add config file
-# ADD ./shiny-server.conf /etc/shiny-server/shiny-server.conf
+# 3.1 expose ports
+EXPOSE 3838
 
-# 5.2 expose ports
-EXPOSE 3838 80 443
-
-# 5.3 add entrypoint
+# 3.2 add entrypoint
 ADD ./docker-entrypoint.sh /home/
 
-# 5.4 add workdir
+# 3.3 add workdir
 WORKDIR /home/
 
-# 5.5 add default command
+# 3.4 add default command
 CMD ["bash", "/home/docker-entrypoint.sh"]
 

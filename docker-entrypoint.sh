@@ -11,7 +11,7 @@ echo "SHINY_LICENSE_PORT: $SHINY_LICENSE_PORT"
 
 # configure license manager
 # /opt/shiny-server/bin/license-manager license-server $SHINY_LICENSE_SERVER:$SHINY_LICENSE_PORT
-/opt/shiny-server/bin/license-manager license-server localhost:$SHINY_LICENSE_PORT
+/opt/shiny-server/bin/license-manager license-server $SHINY_LICENSE_SERVER:$SHINY_LICENSE_PORT
 
 # start shiny
 shiny-server --pidfile=/var/run/shiny-server.pid 
