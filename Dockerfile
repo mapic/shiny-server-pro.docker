@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 LABEL maintainer="knutole@mapic.io"
-LABEL repository="https://github.com/mapic/docker.shiny-server-pro"
+LABEL repository="https://github.com/mapic/shiny-server-pro.docker"
 LABEL version="panda"
 
 
