@@ -1,4 +1,4 @@
- com# Shiny Server Pro Docker Image
+# Shiny Server Pro Docker Image
 
 Please see https://github.com/mapic/shiny.docker-compose for usage instructions.
 
