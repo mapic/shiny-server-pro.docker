@@ -6,6 +6,7 @@ Please see https://github.com/mapic/shiny.docker-compose for usage instructions.
 - [x] Shiny Server Pro version 1.5.9.988
 - [x] R version 3.4.4 (2018-03-15)
 - [x] Running on Ubuntu 16.04
+- [x] [Configured](https://github.com/mapic/shiny-server-pro.docker/blob/master/docker-entrypoint.sh#L6) for use with [Shiny Floating License Server](https://github.com/mapic/shiny-floating-license-server.docker)
 
 ### Shiny packages
  - [x] devtools
