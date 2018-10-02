@@ -1,9 +1,9 @@
-# Shiny Server Pro Docker Image
+ com# Shiny Server Pro Docker Image
 
 Please see https://github.com/mapic/shiny.docker-compose for usage instructions.
 
 ## Contents
-- [x] Shiny Server Pro version 1.5.9 (shiny-server-commercial-1.5.9.988-amd64.deb)
+- [x] Shiny Server Pro version 1.5.9.988
 - [x] R version 3.4.4 (2018-03-15)
 - [x] Running on Ubuntu 16.04
 
