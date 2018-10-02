@@ -3,11 +3,9 @@
 Please see https://github.com/mapic/shiny.docker-compose for usage instructions.
 
 ## Contents
-
-### Shiny Server Pro
-- [ ] Version 1.5.9 (shiny-server-commercial-1.5.9.988-amd64.deb)
-- [ ] Running on Ubuntu 16.04
-- [ ] r-base, r-base-dev, and r-recommended
+- [x] Shiny Server Pro version 1.5.9 (shiny-server-commercial-1.5.9.988-amd64.deb)
+- [x] R version 3.4.4 (2018-03-15)
+- [x] Running on Ubuntu 16.04
 
 ### Shiny packages
  - [x] devtools
