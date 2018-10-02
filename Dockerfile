@@ -72,23 +72,18 @@ RUN sudo wget https://s3.amazonaws.com/rstudio-shiny-server-pro-build/ubuntu-14.
 # 2.3 intall shiny server pro
 RUN sudo gdebi -n shiny-server-commercial-1.5.9.988-amd64.deb
 
-# 3. INSTALL CERTBOT (SSL)
-# -
-# 3.1 install certbot
-RUN sudo add-apt-repository ppa:certbot/certbot
-RUN sudo apt-get update -y
-RUN sudo apt-get install -y certbot 
-
-# 4. INSTALL NGINX
-# -
-# 4.1 install nginx
-RUN sudo apt-get install -y nginx 
+# # 3. INSTALL CERTBOT (SSL)
+# # -
+# # 3.1 install certbot
+# RUN sudo add-apt-repository ppa:certbot/certbot
+# RUN sudo apt-get update -y
+# RUN sudo apt-get install -y certbot 
 
 
 # 5. CONFIGURE
 # -
 # 5.1 add config file
-ADD ./shiny-server.conf /etc/shiny-server/shiny-server.conf
+# ADD ./shiny-server.conf /etc/shiny-server/shiny-server.conf
 
 # 5.2 expose ports
 EXPOSE 3838 80 443
@@ -101,10 +96,4 @@ WORKDIR /home/
 
 # 5.5 add default command
 CMD ["bash", "/home/docker-entrypoint.sh"]
-
-
-
-
-
-
 
