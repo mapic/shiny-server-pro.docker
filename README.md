@@ -1,6 +1,6 @@
 # Shiny Server Pro Docker Image
 
-Please see https://github.com/mapic/shiny.docker-compose for usage instructions.
+Please see https://github.com/mapic/shiny for usage instructions.
 
 ## Contents
 - [x] Shiny Server Pro version 1.5.9.988
