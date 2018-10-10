@@ -1,0 +1,9 @@
+
+language: generic
+services:
+  - docker
+install:
+  - docker build -t docker build -t mapic/shiny-server-pro . > /dev/null
+script:
+  - docker run -d mapic/shiny-server-pro
+
