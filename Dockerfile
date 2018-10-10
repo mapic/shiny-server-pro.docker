@@ -10,6 +10,10 @@ LABEL version="panda"
 # 0.1 install deps
 RUN apt-get update -y
 RUN apt-get install -y sudo software-properties-common apt-transport-https fish git wget curl htop nano net-tools iputils-ping
+RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
+RUN apt-get update -y
+RUN apt-get install -y nodejs
+RUN npm install -g forever
 
 # 0.2 upgrade 
 RUN apt-get upgrade -y
@@ -67,10 +71,10 @@ RUN sudo su - -c "R -e \"install.packages(c( \
 RUN sudo apt-get install -y gdebi-core
 
 # 2.2 download latest package
-RUN sudo wget https://s3.amazonaws.com/rstudio-shiny-server-pro-build/ubuntu-14.04/x86_64/shiny-server-commercial-1.5.9.988-amd64.deb
+RUN sudo wget https://s3.amazonaws.com/rstudio-shiny-server-pro-build/ubuntu-14.04/x86_64/shiny-server-commercial-1.5.10.990-amd64.deb
 
 # 2.3 intall shiny server pro
-RUN sudo gdebi -n shiny-server-commercial-1.5.9.988-amd64.deb
+RUN sudo gdebi -n shiny-server-commercial-1.5.10.990-amd64.deb
 
 
 # 3. CONFIGURE
