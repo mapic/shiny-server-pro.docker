@@ -2,8 +2,7 @@ aws.s3
 curl
 devtools
 digest
-dply
-DT
+dplyr
 DT
 gplots
 htmlwidgets
@@ -15,7 +14,6 @@ leaflet.esri
 methods
 openssl
 plotly
-plyr
 R.methodsS3
 R.oo
 RColorBrewer
