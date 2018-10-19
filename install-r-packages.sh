@@ -4,7 +4,8 @@ while read F  ; do
     
     # install package
     echo "Installing $F..."
-    sudo su - -c "R -e \"install.packages(c('${F}'), repos='https://cran.rstudio.com/')\""
+    # sudo su - -c "R -e \"install.packages(c('${F}'), repos='https://cran.rstudio.com/')\""
+    sudo su - -c "R -e \"withCallingHandlers(install.packages(c('${F}'), repos='https://cran.rstudio.com/'), warning = function(w) stop(w))\""
     
     # check for errors
     EXITCODE=$?
