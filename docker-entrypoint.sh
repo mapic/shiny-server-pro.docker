@@ -6,4 +6,4 @@ export SHINY_LOG_LEVEL=DEBUG
 /opt/shiny-server/bin/license-manager license-server $SHINY_LICENSE_SERVER:$SHINY_LICENSE_PORT
 
 # start shiny
-shiny-server --pidfile=/var/run/shiny-server.pid 
+shiny-server --pidfile=/var/run/shiny-server.pid
