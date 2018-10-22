@@ -14,7 +14,7 @@ while read F  ; do
     if [ "$EXITCODE" -gt "0" ]; then
         echo "Some error occurred when installing package $F..."
         echo "Quitting!"
-        exit 1
+        # exit 1 # debug
     else    
         clear
         echo ""
