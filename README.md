@@ -1,4 +1,4 @@
-# Shiny Server Pro Docker Image [![Build Status](https://travis-ci.org/mapic/shiny-nginx.docker.svg?branch=master)](https://travis-ci.org/mapic/shiny-nginx.docker)
+# Shiny Server Pro Docker Image [![Build Status](https://travis-ci.org/mapic/shiny-server-pro.docker.svg?branch=master)](https://travis-ci.org/mapic/shiny-server-pro.docker)
 
 Please see https://github.com/mapic/shiny for usage instructions.
 
